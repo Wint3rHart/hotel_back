@@ -1,5 +1,7 @@
 let mongoose=require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017/hotel');
+mongoose.connect("mongodb+srv://hassan:mrhassan125@cluster0.is3nlcm.mongodb.net/Hotels?retryWrites=true&w=majority&appName=Cluster0").then(()=>{console.log("MONGODB connected")
+}).catch((err)=>{console.log(err);
+});
 let hash=require('bcryptjs')
 
 let room_schema = new mongoose.Schema({

@@ -21,7 +21,7 @@ const fs = require('fs');
 const cookieParser = require('cookie-parser');
 app.use(cookieParser())
 let router=express.Router();
-
+// cache.flushAll()
 
 app.post('/aik',buffer_mw.single('file'),async(req,res)=>{  console.log(req.file);
   })
@@ -169,7 +169,7 @@ console.log('sending fresh');
 
 
 if(req.query.type=="All"){console.log('recieved');let get=await rooms_model.find();
-// console.log(get);
+console.log(get);
 
 
 cache.set("All",get);
